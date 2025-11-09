@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de Documentos - Vision House</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+    }
+    header {
+      background-color: #0059b2;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 4px solid #0091ff;
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 10px;
+    }
+    main {
+      width: 95%;
+      max-width: 650px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    h1 { font-size: 22px; margin: 10px 0 0; }
+    p { font-size: 15px; color: #333; }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+      color: #003366;
+    }
+    input[type="text"], input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+    }
+    button {
+      background-color: #0091ff;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-top: 20px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0074cc;
+    }
+    p.footer {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 30px;
+      text-align: center;
+    }
+    @media screen and (max-width: 480px) {
+      header h1 { font-size: 18px; }
+      input[type="text"], input[type="file"], button { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/htbys2Ky/Chat-GPT-Image-4-de-nov-de-2025-18-09-57.png" alt="Vision House Imóveis">
+    <h1>Envio de Documentos - Funcionário CLT / Autônomo</h1>
+  </header>
+  <main>
+    <p>Preencha com seus dados e envie as fotos dos documentos solicitados abaixo:</p>
+    <form action="https://formsubmit.co/imobiliariafb@hotmail.com" method="POST" enctype="multipart/form-data">
+      <label>Nome Completo:</label>
+      <input type="text" name="nome" required>
+
+      <label>CPF:</label>
+      <input type="text" name="cpf" required>
+
+      <label>WhatsApp:</label>
+      <input type="text" name="whatsapp" required>
+
+      <label>RG/CPF/CNH (foto):</label>
+      <input type="file" name="documento_identidade" accept="image/*" capture="environment">
+
+      <label>Comprovante de Endereço (mês vigente):</label>
+      <input type="file" name="comprovante_endereco" accept="image/*" capture="environment" required>
+
+      <label>Certidão de Nascimento ou Casamento:</label>
+      <input type="file" name="certidao" accept="image/*" capture="environment">
+
+      <label>Certidão dos filhos menores (se houver):</label>
+      <input type="file" name="filhos" accept="image/*" capture="environment">
+
+      <label>Carteira de Trabalho (física ou digital):</label>
+      <input type="file" name="ctps" accept="image/*" capture="environment" required>
+
+      <label>Extrato do FGTS:</label>
+      <input type="file" name="fgts" accept="image/*" capture="environment" required>
+
+      <label>Holerite ou Contracheque mais recente:</label>
+      <input type="file" name="holerites" accept="image/*" capture="environment" required>
+
+      <label>Declaração de Imposto de Renda (se tiver declarado):</label>
+      <input type="file" name="ir" accept="image/*" capture="environment">
+
+      <label>Extratos Bancários dos últimos 6 meses (somente para Autônomos):</label>
+      <input type="file" name="extrato_autonomo" accept="image/*" multiple capture="environment">
+
+      <input type="hidden" name="_next" value="https://visionhouse.vercel.app/obrigado.html">
+      <input type="hidden" name="_captcha" value="false">
+      
+      <button type="submit">Enviar Documentos</button>
+    </form>
+    <p class="footer">
+      Ao enviar os documentos, você autoriza a equipe da Vision House Imóveis a utilizá-los para análise de financiamento junto à Caixa Econômica Federal.
+    </p>
+    <p class="footer">
+      &copy; 2025 Vision House Imóveis. Todos os direitos reservados.<br>
+      Este site e seus conteúdos são protegidos pelas leis de propriedade intelectual.<br>
+      As informações fornecidas pelos usuários são utilizadas exclusivamente para fins de análise de crédito e não são compartilhadas com terceiros.
+    </p>
+  </main>
+</body>
+</html>
